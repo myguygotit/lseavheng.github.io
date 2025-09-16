@@ -273,7 +273,7 @@
                 margin: 0;
                 border-radius: 0;
                 border: none;
-                animation: none; /* Disable container animation on mobile */
+                /* The 'animation: none;' rule has been REMOVED to allow animation on mobile */
             }
             .left-column, .right-column {
                 width: 100%;
@@ -281,10 +281,8 @@
             }
             .left-column h1 { font-size: 2em; }
             .right-column h2 { font-size: 1.4em; }
-            /* Ensure animations still play on mobile, just without container animation */
-            .info-section, .content-block {
-                animation-delay: 0s !important; /* Start immediately on mobile */
-            }
+            /* The rule that reset animation-delay has been REMOVED,
+               so the original staggered delays will now apply on mobile. */
         }
     </style>
 </head>
@@ -361,5 +359,7 @@
         </main>
     </div>
 
+</body>
+</html>
 </body>
 </html>
